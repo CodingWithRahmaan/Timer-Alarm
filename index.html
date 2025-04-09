@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js" integrity="sha512-4F1cxYdMiAW98oomSLaygEwmCnIP38pb4Kx70yQYqRwLVCs3DbRumfBq82T08g/4LJ/smbFGFpmeFlQgoDccgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <title>Timer Clock UI</title>
   <style>
@@ -14,6 +15,17 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+    }
+    .vv{
+        width: 90%;
+        height: 40px;
+        background-color: #1f2937;
+        border-radius: 20px;
+        padding: 10px;
+        color: white;
+        font-size: 16px;
+        border: 2px solid #10b981;
+        margin-top: 20px;
     }
     .ae{
         font-size: 50px;
@@ -56,7 +68,8 @@
       font-size: 16px;
     }
 
-    button {
+   
+    .set {
       background-color: #10b981;
       color: white;
       padding: 12px;
@@ -65,25 +78,36 @@
       font-size: 16px;
       cursor: pointer;
       width: 100%;
+      margin-bottom: 5px;
     }
-
+.cancel{
+    background-color: #e90d0d;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 5px;
+}
     button:hover {
       background-color: #059669;
     }
   </style>
 </head>
 <body>
-
-  <div class="timer-box">
-    <h1>⏰ Timer Clock</h1>
-    <div id="abc" class="display-time">00:00</div>
-
-    <div>
-        <h1 id="abc"></h1>
-        <input class="ae" type="time" id="alarmTime" placeholder="Set alarm">
+    <div class="timer-box">
+        <h1>⏰ Timer Clock</h1>
+        <div id="abc" class="display-time">00:00</div>
+    
+        <div>
+            <label for="alarmTime"></label>
+            <input class="ae" type="time" id="alarmTime" placeholder="Set alarm">
+        </div>
+        <button class="set" onclick="setAlarm()">Set Alarm</button>
+        <button class="cancel" id="ee" onclick="stopAlarm()">Stop Alarm</button>
     </div>
-    <button>Set Alarm</button>
-  </div>
 <script src="app.js"></script>
 </body>
 </html>
