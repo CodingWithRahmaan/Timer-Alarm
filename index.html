@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js" integrity="sha512-4F1cxYdMiAW98oomSLaygEwmCnIP38pb4Kx70yQYqRwLVCs3DbRumfBq82T08g/4LJ/smbFGFpmeFlQgoDccgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <title>Timer Clock UI</title>
+  <style>
+    body {
+      background-color: #111827;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .ae{
+        font-size: 50px;
+        height: 60px;
+        border-radius: 50%;
+      
+        margin-bottom: 30px;
+        width:60px;
+        background-color:#1f2937;
+        border: none;
+        margin-right: 5px;
+    }
+    .timer-box {
+      background-color: #1f2937;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      text-align: center;
+      width: 300px;
+    }
+
+    .timer-box h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .display-time {
+      font-size: 48px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      width: 100%;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #10b981;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #059669;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="timer-box">
+    <h1>⏰ Timer Clock</h1>
+    <div id="abc" class="display-time">00:00</div>
+
+    <div>
+        <h1 id="abc"></h1>
+        <input class="ae" type="time" id="alarmTime" placeholder="Set alarm">
+    </div>
+    <button>Set Alarm</button>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>
